@@ -20,7 +20,7 @@
 
 ##   You might also start by listing the files in your working directory
 
-getwd("~DataScience/linear_regression") # where am I?
+setwd("~/DataScience/linear_regression") # where am I?
 list.files("~DataScience/linear_regression/dataSets") # files in the dataSets folder
 
 ## Load the states data
@@ -147,6 +147,7 @@ stateincomemodel <- lm(energy ~ metro + income, data = na.omit(states.data))
 statemodel <- update(statemodel, data = na.omit(states.data))
 anova(statemodel, stateincomemodel)
 coef(summary(stateincomemodel))
+#the model is sig better with more predictors.
 
 
 ## Interactions and factors
